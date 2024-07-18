@@ -24,11 +24,11 @@ class Mascota extends Animal{
     this.cliente = cliente;
   }
 
-  public HistorialClinico getHc() {
+  public HistorialClinico getHistorialClinico() {
     return historialClinico;
   }
 
-  public void setHc(HistorialClinico hc) {
+  public void setHistorialClinico(HistorialClinico hc) {
     this.historialClinico = hc;
   }
   

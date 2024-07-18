@@ -2,13 +2,21 @@
 package com.ucoltis.elimas.veterinaria;
 
 import java.time.LocalDateTime;
-import java.time.Month;
+
 
 
 public class Consulta {
   private final Long id;
   private LocalDateTime fecha;
   private String descripcion;
+  private DetalleClinico detalleClinico;
+  private Veterinario veterinario;
+  private Factura factura;
+  
+  /***
+   * Consulta: Cada consulta está asociada con exactamente un veterinario (1).
+   * 
+   */
 
   public Consulta(Long id, String descripcion) {
     this.id = id;
@@ -21,7 +29,7 @@ public class Consulta {
    
   }
   public void relacionConObjetos(Mascota mascota,Veterinario veterinario){
-     
+     //TODO
   }
 
   public Long getId() {
@@ -42,6 +50,31 @@ public class Consulta {
   public void setDescripcion(String descripcion) {
     this.descripcion = descripcion;
   }
+
+    public DetalleClinico getDetalleClinico() {
+        return detalleClinico;
+    }
+
+    public void setDetalleClinico(DetalleClinico detalleClinico) {
+        this.detalleClinico = detalleClinico;
+    }
+    public Veterinario getVeterinario() {
+        return veterinario;
+    }
+
+    public void setVeterinario(Veterinario veterinario) {
+        this.veterinario = veterinario;
+    }
+
+    public Factura getFactura() {
+        return factura;
+    }
+
+    public void setFactura(Factura factura) {
+        this.factura = factura;
+    }
+    
+    
    
   
   

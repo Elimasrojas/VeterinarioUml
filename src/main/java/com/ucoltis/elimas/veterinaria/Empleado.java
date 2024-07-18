@@ -5,7 +5,8 @@ package com.ucoltis.elimas.veterinaria;
 public abstract class Empleado extends Persona implements IAcciones{
   private Double sueldo;
 
-  public Empleado(Long cedula, String nombre, String apellido, Integer edad,Double sueldoS) {
+  public Empleado(Long cedula, String nombre, String apellido, 
+          Integer edad,Double sueldo) {
     super(cedula, nombre, apellido, edad);
     this.sueldo = sueldo;
   }

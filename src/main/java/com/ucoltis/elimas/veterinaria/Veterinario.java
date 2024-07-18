@@ -2,11 +2,19 @@
 package com.ucoltis.elimas.veterinaria;
 
 
+
+
 public class Veterinario extends Empleado{
   private String especialidad;
+  
+  /***
+   * Veterinario: Un veterinario puede estar asociado con muchas consultas (0..*).
+   * 
+   */
 
-  public Veterinario(String especialidad, Long cedula, String nombre, String apellido, Integer edad, Double sueldoS) {
-    super(cedula, nombre, apellido, edad, sueldoS);
+  public Veterinario(Long cedula, String nombre, String apellido, Integer edad, 
+          Double sueldo,String especialidad ) {
+    super(cedula, nombre, apellido, edad, sueldo);
     this.especialidad = especialidad;
   }
 
