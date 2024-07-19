@@ -1,11 +1,15 @@
 
 package com.ucoltis.elimas.veterinaria;
 
+import java.util.List;
+
 
 public class Producto {
   private Long codigo;
   private String nombre;
   private Double precio;
+  
+  private List<DetalleFactura> dtalleFactura;
   
   /***
    * Queremos saber qué productos están en cada Detallefactura,
