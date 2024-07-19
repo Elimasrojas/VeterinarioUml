@@ -24,6 +24,7 @@ public class Producto {
     this.codigo = codigo;
     this.nombre = nombre;
     this.precio = precio;
+    
   }
 
   public Long getCodigo() {
