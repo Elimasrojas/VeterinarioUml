@@ -12,6 +12,8 @@ public class Producto {
   private List<DetalleFactura> dtalleFactura;
   
   /***
+   * Producto NO nesecita un grupo de detalle de facturas
+   * 
    * Queremos saber qué productos están en cada Detallefactura,
    * pero el producto no necesita saber en qué DetalleFactura está. 0.*
    * La relación de 0..* indica que un Producto puede estar en cero,

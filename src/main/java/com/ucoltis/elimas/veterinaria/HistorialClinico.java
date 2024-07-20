@@ -7,7 +7,7 @@ import java.util.List;
 public class HistorialClinico {
   private Mascota mascota;
   private final Integer id;
-  private final List<DetalleClinico> detalleClinicos;
+  private final List<DetalleClinico> detalleClinicos; //getter y final se inicializa en contructor
 
   public HistorialClinico(Integer id) {
     this.id = id;
@@ -23,6 +23,7 @@ public class HistorialClinico {
   }
   
   public void agregarDetalle(DetalleClinico detalleClinico){
+    detalleClinicos.add(detalleClinico);
     
   }
 

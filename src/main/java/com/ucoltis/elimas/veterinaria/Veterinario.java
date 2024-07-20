@@ -1,21 +1,32 @@
-
 package com.ucoltis.elimas.veterinaria;
 
+import java.util.ArrayList;
+import java.util.List;
 
+public class Veterinario extends Empleado {
 
-
-public class Veterinario extends Empleado{
   private String especialidad;
-  
-  /***
-   * Veterinario: Un veterinario puede estar asociado con muchas consultas (0..*).
-   * 
-   */
+  private List<Consulta> consultas;
 
-  public Veterinario(Long cedula, String nombre, String apellido, Integer edad, 
-          Double sueldo,String especialidad ) {
+  /**
+   * *
+   * Veterinario: Un veterinario puede estar asociado con muchas consultas
+   * (0..*).
+   *
+   */
+  public Veterinario(Long cedula, String nombre, String apellido, Integer edad,
+          Double sueldo, String especialidad) {
     super(cedula, nombre, apellido, edad, sueldo);
     this.especialidad = especialidad;
+    consultas = new ArrayList<>();
+  }
+
+  public List<Consulta> getConsultas() {
+    return consultas;
+  }
+
+  public void agregarConsulta(Consulta consulta) {
+    consultas.add(consulta);
   }
 
   public String getEspecialidad() {
@@ -28,9 +39,7 @@ public class Veterinario extends Empleado{
 
   @Override
   public void calcularSueldo() {
-    
+
   }
-  
-  
-  
+
 }

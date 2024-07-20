@@ -7,8 +7,9 @@ import java.time.LocalDateTime;
 class DetalleClinico {
   private LocalDateTime fecha;
   private String descripcion;
-  private HistorialClinico historialClinico;
-  private Consulta consulta;
+  
+  private HistorialClinico historialClinico; //setter y getter
+  private final Consulta consulta;//getter final xq tiene contructor
 
   public DetalleClinico(Consulta consulta) {
     this.consulta=consulta;
@@ -17,11 +18,6 @@ class DetalleClinico {
   public Consulta getConsulta() {
     return consulta;
   }
-
-  public void setConsulta(Consulta consulta) {
-    this.consulta = consulta;
-  }
-  
 
   public LocalDateTime getFecha() {
     return fecha;

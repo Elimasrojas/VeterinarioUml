@@ -8,8 +8,9 @@ public class Factura {
 
     private final Long numero;
     private LocalDate fecha;
-    private List<DetalleFactura> detalleFacturas;
-    private Consulta consulta;
+    
+    private final List<DetalleFactura> detalleFacturas;
+    private Consulta consulta;// crear la fact y luego le doce que consulta es 
 
     public Factura(Long numero, LocalDate fecha) {
         this.numero = numero;
@@ -31,6 +32,7 @@ public class Factura {
 
     public void agregarDetalleFactura(DetalleFactura detalleFactura) {
         //TODO
+        detalleFacturas.add(detalleFactura);
     }
 
     public Double Total() {
@@ -42,10 +44,7 @@ public class Factura {
         return detalleFacturas;
     }
 
-    public void setDetalleFacturas(List<DetalleFactura> detalleFacturas) {
-        this.detalleFacturas = detalleFacturas;
-    }
-
+   
     public Consulta getConsulta() {
         return consulta;
     }
