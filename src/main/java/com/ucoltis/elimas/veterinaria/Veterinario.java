@@ -42,4 +42,10 @@ public class Veterinario extends Empleado {
 
   }
 
+  @Override
+  public String toString() {
+    return "| "+getCedula()+" | "+getNombre()+" "+getApellido()+" "+especialidad ;
+  }
+  
+
 }

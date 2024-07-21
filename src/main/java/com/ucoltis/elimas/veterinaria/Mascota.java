@@ -13,7 +13,7 @@ class Mascota extends Animal{
   private HistorialClinico historialClinico;//getter y setter
   private List<Consulta> consultas;//solo getter y agregarConsulta
   
-  public Mascota(Long id, String especie, String raza, String nombre) {
+  public Mascota(String especie, String raza, String nombre,Long id) {
     super(especie, raza, nombre);
     this.id = id;
     consultas= new ArrayList<>();
@@ -35,8 +35,8 @@ class Mascota extends Animal{
     return historialClinico;
   }
 
-  public void setHistorialClinico(HistorialClinico hc) {
-    this.historialClinico = hc;
+  public void setHistorialClinico(HistorialClinico historialClinico) {
+    this.historialClinico = historialClinico;
   }
 
   public List<Consulta> getConsultas() {
@@ -46,6 +46,13 @@ class Mascota extends Animal{
   public void agregarConsulta(Consulta consulta){
     consultas.add(consulta);
   }
+
+  @Override
+  public String toString() {
+    return "| "+nombre+ " - "+especie+ " - "+raza; 
+  }
+  
+  
   
   
   
