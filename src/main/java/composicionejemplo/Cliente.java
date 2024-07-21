@@ -1,50 +1,60 @@
-
 package composicionejemplo;
-
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
-    private List<Mascota> mascotas;
 
-    // Constructor
-    public Cliente() {
-        this.mascotas = new ArrayList<>();
-    }
+  private String nombre;
+  private List<Mascota> mascotas;
 
-    // Método para crear y añadir una nueva mascota
-    public void addMascota(Long id) {
-        Mascota nuevaMascota = new Mascota(id);
-        this.mascotas.add(nuevaMascota);
-    }
+  // Constructor
+  public Cliente(String nombre) {
+    this.nombre=nombre;
+    this.mascotas = new ArrayList<>();
+  }
 
-    // Getters
-    public List<Mascota> getMascotas() {
-        return mascotas;
-    }
+  public String getNombre() {
+    return nombre;
+  }
 
-    @Override
-    public String toString() {
-        return "Cliente{mascotas=" + mascotas + "}";
-    }
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
+
+  // Método para crear y añadir una nueva mascota
+  public void addMascota(Long id) {
+    Mascota nuevaMascota = new Mascota(id);
+    this.mascotas.add(nuevaMascota);
+  }
+
+  // Getters
+  public List<Mascota> getMascotas() {
+    return mascotas;
+  }
+
+  @Override
+  public String toString() {
+    return "Cliente{mascotas=" + mascotas + "}";
+  }
 }
 
 class Mascota {
-    private Long id;
 
-    // Constructor
-    public Mascota(Long id) {
-        this.id = id;
-    }
+  private Long id;
 
-    // Getters
-    public Long getId() {
-        return id;
-    }
+  // Constructor
+  public Mascota(Long id) {
+    this.id = id;
+  }
 
-    @Override
-    public String toString() {
-        return "Mascota{id=" + id + "}";
-    }
+  // Getters
+  public Long getId() {
+    return id;
+  }
+
+  @Override
+  public String toString() {
+    return "Mascota{id=" + id + "}";
+  }
 }
