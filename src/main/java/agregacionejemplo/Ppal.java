@@ -13,7 +13,7 @@ public class Ppal {
     var mascota= new Mascota(1L);
     cliente.addMascota(mascota);
     System.out.println(cliente);
-    System.gc();
+    cliente=null;
     
     var cliente1 = new Cliente();
     mascota= new Mascota(2L);
