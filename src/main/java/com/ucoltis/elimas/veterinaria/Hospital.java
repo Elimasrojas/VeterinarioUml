@@ -267,6 +267,6 @@ public class Hospital {
     for (var cliente : clientes) {
       System.out.println(cliente);
     }
-    // TODO: Implementar
+   
   }
 }
