@@ -20,7 +20,7 @@ class DetalleFactura {
 
   public Double getTotal() {
     //TODO
-    return null;
+    return this.Cantidad*this.producto.getPrecio();
   }
 
   public Factura getFactura() {

@@ -35,9 +35,9 @@ public class Factura {
         detalleFacturas.add(detalleFactura);
     }
 
-    public Double Total() {
+    public Double getTotal() {
         //TODO
-        return null;
+        return detalleFacturas.stream().mapToDouble(DetalleFactura::getTotal).sum(); 
     }
 
     public List<DetalleFactura> getDetalleFacturas() {
